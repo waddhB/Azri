@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AZRI FZCO | Request a Quote</title>
+    <meta name="description" content="Contact AZRI's enterprise solutions team in Dubai. Request a quote for General Trading, Solar Energy, or IT Infrastructure solutions.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="images/logo/azri-logo-white.svg" alt="AZRI FZCO" height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="d-flex ms-lg-4">
+                <a href="ar/contact.html" class="btn btn-outline me-3">
+                    <i class="fas fa-globe me-2"></i>العربية
+                </a>
+                <a href="contact.html?quote=1" class="btn btn-primary">
+                    <i class="fas fa-file-invoice me-2"></i>Request a Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== PAGE HEADER - CENTERED ===== -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="text-white display-4 fw-bold">Contact Us</h1>
+                <p class="text-white-50 lead">Request a quote or speak with our enterprise solutions specialists</p>
+            </div>
+        </div>
+    </div>
+    <div class="circuit-pattern"></div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="section">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Quote Form -->
+            <div class="col-lg-7">
+                <div class="quote-form">
+                    <h2 class="text-center mb-4">Request a Quote</h2>
+                    <p class="text-muted text-center mb-4">Fill out the form below and our team will respond within 24 hours.</p>
+                    
+                    <form id="quoteForm">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="companyName" class="form-label">Company Name *</label>
+                                <input type="text" class="form-control" id="companyName" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="contactPerson" class="form-label">Contact Person *</label>
+                                <input type="text" class="form-control" id="contactPerson" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="serviceCategory" class="form-label">Service Category *</label>
+                                <select class="form-select" id="serviceCategory" required>
+                                    <option value="" selected disabled>Select a service</option>
+                                    <option value="General Trading">General Trading</option>
+                                    <option value="Solar Energy">Solar Energy Trading</option>
+                                    <option value="IT Infrastructure">IT Infrastructure</option>
+                                    <option value="Huawei eKit">Huawei eKit</option>
+                                    <option value="Huawei Enterprise">Huawei Enterprise</option>
+                                    <option value="Milesight Security">Milesight Security</option>
+                                    <option value="Huawei Training">Huawei Training</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message / Requirements</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project, requirements, or timeline..."></textarea>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Quote Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information - FIXED DO NOT CHANGE -->
+            <div class="col-lg-5">
+                <div class="contact-card">
+                    <h2 class="text-center mb-4">Contact Information</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@azri.ae">info@azri.ae</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:97144186074">04 418 6074</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>
+                                IFZA Business Park, Building A2<br>
+                                Dubai Silicon Oasis<br>
+                                Dubai, PO BOX 342001<br>
+                                United Arab Emirates
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <h4 class="text-center mb-3">Business Hours</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Sunday - Thursday</span>
+                        <span class="fw-bold">8:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <span>Friday - Saturday</span>
+                        <span class="text-muted">Closed</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://wa.me/97144186074" class="btn btn-success w-100" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="mt-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.123456789!2d55.123456789!3d25.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjAiTiA1NcKwMDcnMjQuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <img src="images/logo/azri-logo-white.svg" alt="AZRI FZCO" class="footer-logo">
+                <p class="text-white-50 mt-3">AZRI delivers enterprise-grade technology and trading solutions to government, enterprise, and system integrator clients across the UAE.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html#trading">General Trading</a></li>
+                    <li><a href="services.html#solar">Solar Energy</a></li>
+                    <li><a href="services.html#it">IT Infrastructure</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Contact</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@azri.ae">info@azri.ae</a></p>
+                    <p><i class="fas fa-phone me-2"></i> <a href="tel:97144186074">04 418 6074</a></p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> IFZA Business Park, Building A2, Dubai Silicon Oasis, Dubai, PO BOX 342001, UAE</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AZRI – FZCO. All rights reserved. IFZA Registered Company.</p>
+            <div class="language-switch">
+                <a href="/" class="active">English</a>
+                <span class="mx-2 text-white-50">|</span>
+                <a href="/ar/contact.html">العربية</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/97144186074" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Notification Container -->
+<div id="notification-container"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+<script src="js/rtl.js"></script>
+</body>
+</html>
