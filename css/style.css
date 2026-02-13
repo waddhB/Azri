@@ -1,9 +1,3 @@
-/* =========================================
-   AZRI CORPORATE WEBSITE - BOOTSTRAP 5
-   Brand Colors: Navy #0A1F44, Teal #1E90C0, Aqua #00C9B1
-   Complete File - Ready to Use
-   ========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
 
@@ -20,36 +14,28 @@
     --azri-shadow-lg: 0 20px 40px rgba(10, 31, 68, 0.12);
     --azri-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-/* ===== BASE STYLES ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
-body {
+dy {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--azri-dark);
     line-height: 1.6;
     overflow-x: hidden;
     padding-top: 80px;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     letter-spacing: -0.02em;
 }
-
 a {
     text-decoration: none;
 }
-
-/* ===== NAVBAR UNIVERSAL ===== */
 .navbar {
     padding: 20px 0;
     transition: var(--azri-transition);
@@ -188,19 +174,160 @@ a {
     z-index: 1;
 }
 
-.circuit-pattern {
+/* ===== PROFESSIONAL ANIMATED BACKGROUND - 2D ADVANCED ===== */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #0A1F44 0%, #1E3A5F 100%);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Circuit Lines Network */
+.circuit-network {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><path d="M0 400 L200 400 L200 200 L400 200 L400 400 L600 400 L600 600 L800 600 L800 400 L1000 400 L1000 200 L1200 200" stroke="%231E90C0" stroke-width="2" fill="none" opacity="0.15"/><circle cx="200" cy="400" r="4" fill="%2300C9B1" opacity="0.3"/><circle cx="400" cy="200" r="4" fill="%2300C9B1" opacity="0.3"/><circle cx="600" cy="600" r="4" fill="%2300C9B1" opacity="0.3"/><circle cx="800" cy="400" r="4" fill="%2300C9B1" opacity="0.3"/><circle cx="1000" cy="200" r="4" fill="%2300C9B1" opacity="0.3"/></svg>');
-    background-size: cover;
-    opacity: 0.3;
-    animation: pulse 4s ease-in-out infinite;
+    background-image: 
+        linear-gradient(90deg, rgba(30,144,192,0.1) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(30,144,192,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: networkPulse 8s ease-in-out infinite;
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 0.4; }
+@keyframes networkPulse {
+    0%, 100% { opacity: 0.3; background-size: 50px 50px; }
+    50% { opacity: 0.6; background-size: 55px 55px; }
+}
+
+/* Floating Particles */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--azri-teal);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle 15s linear infinite;
+}
+
+.particle:nth-child(1) { top: 20%; left: 10%; animation-duration: 18s; }
+.particle:nth-child(2) { top: 60%; left: 80%; animation-duration: 22s; width: 6px; height: 6px; }
+.particle:nth-child(3) { top: 30%; left: 40%; animation-duration: 25s; background: var(--azri-aqua); }
+.particle:nth-child(4) { top: 70%; left: 20%; animation-duration: 20s; width: 3px; height: 3px; }
+.particle:nth-child(5) { top: 80%; left: 60%; animation-duration: 28s; background: var(--azri-teal); }
+.particle:nth-child(6) { top: 40%; left: 90%; animation-duration: 16s; width: 5px; height: 5px; }
+.particle:nth-child(7) { top: 15%; left: 70%; animation-duration: 24s; background: var(--azri-aqua); }
+.particle:nth-child(8) { top: 85%; left: 30%; animation-duration: 19s; }
+
+@keyframes floatParticle {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.3; }
+    25% { transform: translateY(-30px) translateX(15px) rotate(90deg); opacity: 0.6; }
+    50% { transform: translateY(-50px) translateX(0) rotate(180deg); opacity: 0.3; }
+    75% { transform: translateY(-30px) translateX(-15px) rotate(270deg); opacity: 0.6; }
+    100% { transform: translateY(0) translateX(0) rotate(360deg); opacity: 0.3; }
+}
+
+/* Rotating Geometric Shapes */
+.geometric-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border: 2px solid rgba(30,144,192,0.2);
+    animation: rotateShape 20s linear infinite;
+}
+
+.shape.square {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    right: 10%;
+    border-color: rgba(0,201,177,0.15);
+    animation-duration: 30s;
+}
+
+.shape.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    bottom: 5%;
+    left: 5%;
+    border-color: rgba(30,144,192,0.1);
+    animation-duration: 25s;
+    animation-direction: reverse;
+}
+
+.shape.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 173px solid rgba(0,201,177,0.1);
+    top: 20%;
+    left: 20%;
+    animation: rotateTriangle 18s linear infinite;
+}
+
+@keyframes rotateShape {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes rotateTriangle {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 0.4; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.2; }
+}
+
+/* Energy Waves */
+.energy-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(30,144,192,0.1) 0%, transparent 50%);
+    animation: waveMove 15s ease-in-out infinite;
+}
+
+.wave:nth-child(2) {
+    background: radial-gradient(circle at 70% 30%, rgba(0,201,177,0.1) 0%, transparent 50%);
+    animation: waveMove 18s ease-in-out infinite reverse;
+}
+
+@keyframes waveMove {
+    0% { transform: translate(-10%, -10%) rotate(0deg); }
+    50% { transform: translate(10%, 10%) rotate(5deg); }
+    100% { transform: translate(-10%, -10%) rotate(0deg); }
+}
+
+/* Hero Content - فوق الخلفية */
+.hero-content {
+    position: relative;
+    z-index: 10;
 }
 
 .hero-content {
@@ -1448,4 +1575,168 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after,
 [dir="rtl"] h5::after, 
 [dir="rtl"] h6::after {
     display: none !important;
+}
+/* ===== CTA SECTION - ULTRA LUXURY STYLE ===== */
+.cta-section {
+    position: relative;
+    padding: 100px 0;
+    isolation: isolate;
+}
+
+.cta-wrapper {
+    background: linear-gradient(145deg, #0c2340, #0a1f44);
+    padding: 90px 50px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 30px 60px -15px rgba(0,0,0,0.5),
+        inset 0 1px 2px rgba(255,255,255,0.1),
+        inset 0 -1px 2px rgba(0,0,0,0.5);
+    border: 1px solid rgba(30,144,192,0.2);
+}
+
+/* خلفية كريستالية متحركة */
+.cta-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(30,144,192,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(0,201,177,0.15) 0%, transparent 40%),
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 40px);
+    animation: luxuryMove 30s linear infinite;
+    z-index: 1;
+}
+
+@keyframes luxuryMove {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-30px, -30px) rotate(3deg); }
+}
+
+/* طبقة توهج ذهبي */
+.cta-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(30,144,192,0.5), 
+        rgba(0,201,177,0.5), 
+        rgba(30,144,192,0.5), 
+        transparent
+    );
+    z-index: 2;
+}
+
+/* العنوان الفاخر */
+.cta-title-luxury {
+    font-size: 56px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+    text-shadow: 
+        0 2px 10px rgba(0,0,0,0.3),
+        2px 2px 0 rgba(30,144,192,0.2);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.cta-title-luxury::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        var(--azri-teal), 
+        var(--azri-aqua), 
+        var(--azri-teal)
+    );
+    margin: 25px auto 0;
+    border-radius: 3px;
+}
+
+/* الوصف الفاخر */
+.cta-description-luxury {
+    font-size: 20px;
+    color: rgba(255,255,255,0.9);
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 10;
+    font-weight: 400;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* الزر الفاخر */
+.cta-button-luxury {
+    background: linear-gradient(135deg, #1E90C0, #00C9B1) !important;
+    border: none !important;
+    padding: 18px 50px !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    border-radius: 50px !important;
+    box-shadow: 
+        0 15px 30px rgba(0,0,0,0.3),
+        0 0 0 1px rgba(255,255,255,0.2) inset,
+        0 0 20px rgba(30,144,192,0.3) !important;
+    position: relative;
+    z-index: 10;
+    transition: all 0.4s ease !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-button-luxury:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 
+        0 25px 45px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(255,255,255,0.4) inset,
+        0 0 30px rgba(30,144,192,0.5) !important;
+}
+
+.cta-button-luxury i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button-luxury:hover i {
+    transform: translateX(-5px);
+}
+
+/* RTL تعديلات */
+[dir="rtl"] .cta-button-luxury i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .cta-button-luxury:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .cta-title-luxury { font-size: 48px; }
+    .cta-wrapper { padding: 70px 40px; }
+}
+
+@media (max-width: 768px) {
+    .cta-title-luxury { font-size: 40px; }
+    .cta-description-luxury { font-size: 18px; }
+    .cta-button-luxury { padding: 15px 40px !important; font-size: 18px !important; }
+}
+
+@media (max-width: 576px) {
+    .cta-title-luxury { font-size: 32px; }
+    .cta-description-luxury { font-size: 16px; }
+    .cta-button-luxury { padding: 12px 30px !important; font-size: 16px !important; }
 }

@@ -25,7 +25,7 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/ar/">
+        <a class="navbar-brand" href="/ar/index.html">
             <img src="../images/logo/azri-logo-white.svg" alt="أزري FZCO" height="45">
         </a>
         
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarMainAr">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/ar/">الرئيسية</a>
+                    <a class="nav-link" href="/ar/index.html">الرئيسية</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">عن أزري</a>
@@ -70,11 +70,42 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="text-white display-4 fw-bold">حلول المؤسسات</h1>
+                <br>
                 <p class="text-white-50 lead">هواوي إيكيت · هواوي إنتربرايز · مايلسايت للأمن · الطاقة الشمسية · التجارة العامة</p>
             </div>
         </div>
     </div>
     <div class="circuit-pattern"></div>
+    <!-- ===== PROFESSIONAL ANIMATED BACKGROUND ===== -->
+<div class="hero-background">
+    <!-- Circuit Network -->
+    <div class="circuit-network"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Geometric Shapes -->
+    <div class="geometric-shapes">
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+    </div>
+    
+    <!-- Energy Waves -->
+    <div class="energy-waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+</div>
 </section>
 
 <!-- ===== SERVICES PORTFOLIO - CENTERED ===== -->
@@ -86,10 +117,11 @@
         </div>
         
         <div class="row g-4">
+            <!-- التجارة العامة -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="../images/icons/trading.svg" alt="التجارة العامة">
+                        <i class="fas fa-handshake fa-3x" style="color: var(--azri-teal);"></i>
                     </div>
                     <h3>التجارة العامة</h3>
                     <p>المشتريات الاستراتيجية، تحسين سلسلة التوريد، وتجارة السلع للقطاعات الصناعية والتجارية.</p>
@@ -99,33 +131,35 @@
                         <li><i class="fas fa-check-circle"></i> مستلزمات الصيانة</li>
                     </ul>
                     <a href="services.html#trading" class="service-link">
-                         اقرأ المزيد<i class="fas fa-arrow-left"></i>
+                 اقرأ المزيد<i class="fas fa-arrow-left"></i>
                     </a>
                 </div>
             </div>
             
+            <!-- تجارة الطاقة الشمسية -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="../images/icons/solar.svg" alt="الطاقة الشمسية">
+                        <i class="fas fa-sun fa-3x" style="color: var(--azri-teal);"></i>
                     </div>
                     <h3>تجارة الطاقة الشمسية</h3>
                     <p>أنظمة كهروضوئية عالية الكفاءة، محولات، وحلول طاقة متجددة للمشاريع التجارية ومشاريع المرافق.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check-circle"></i> الألواح الشمسية</li>
-                        <li><i class="fas fa-check-circle"></i> المحولات</li>
+                        <li><i class="fas fa-check-circle"></i> المحولات والمعززات</li>
                         <li><i class="fas fa-check-circle"></i> هياكل التثبيت</li>
                     </ul>
                     <a href="services.html#solar" class="service-link">
-                      اقرأ المزيد<i class="fas fa-arrow-left"></i>
+                 اقرأ المزيد<i class="fas fa-arrow-left"></i>
                     </a>
                 </div>
             </div>
             
+            <!-- البنية التحتية التقنية -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="../images/icons/it.svg" alt="البنية التحتية التقنية">
+                        <i class="fas fa-microchip fa-3x" style="color: var(--azri-teal);"></i>
                     </div>
                     <h3>البنية التحتية التقنية</h3>
                     <p>حزمة تكنولوجيا مؤسسية متكاملة تشمل الشبكات والأمن والتخزين والحلول السحابية من هواوي ومايلسايت.</p>
@@ -135,7 +169,7 @@
                         <li><i class="fas fa-check-circle"></i> أمن مايلسايت</li>
                     </ul>
                     <a href="services.html#it" class="service-link">
-                        اقرأ المزيد<i class="fas fa-arrow-left"></i> 
+                 اقرأ المزيد<i class="fas fa-arrow-left"></i>
                     </a>
                 </div>
             </div>
@@ -160,7 +194,6 @@
                     <h3 style="font-size: 28px; color: var(--azri-navy); margin-bottom: 5px; text-align: right;">منتجات هواوي إيكيت</h3>
                     <p style="color: var(--azri-gray); margin-bottom: 0; text-align: right;">شبكات الجيل التالي للشركات والمؤسسات</p>
                     <p style="color: var(--azri-teal); font-size: 14px; margin-top: 5px; text-align: right; display: flex; align-items: center; gap: 8px; justify-content: flex-end;">
-                      
                         
                     </p>
                 </div>
@@ -397,15 +430,15 @@
 </section>
 
 <!-- ===== CTA SECTION - CENTERED ===== -->
-<section class="section cta-centered">
+<section class="section cta-section cta-centered">
     <div class="container">
         <div class="cta-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2>هل تحتاج إلى حل مخصص؟</h2>
-                    <p class="mb-4">فريقنا التقني جاهز لتصميم البنية التحتية المثالية لمؤسستك.</p>
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-file-invoice ms-2"></i>طلب عرض سعر
+                    <h2 class="cta-title-modern">هل تحتاج إلى حل مخصص؟</h2>
+                    <p class="cta-description-modern mb-4">فريقنا التقني جاهز لتصميم البنية التحتية المثالية لمؤسستك.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg cta-button-modern">
+                        <i class="ms-2"></i>طلب عرض سعر
                     </a>
                 </div>
             </div>

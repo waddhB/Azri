@@ -99,7 +99,7 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="index.html">
           <img
             src="images/logo/azri-logo-white.svg"
             alt="AZRI FZCO"
@@ -118,7 +118,7 @@
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="/">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -146,130 +146,154 @@
       </div>
     </nav>
 
-    <!-- ===== HERO SECTION - CENTERED ===== -->
-    <section class="hero hero-centered">
-      <div class="hero-background">
-        <div class="circuit-pattern"></div>
-      </div>
-
-      <div class="container">
+<section class="hero hero-centered">
+    <div class="hero-background">
+        <!-- Circuit Network -->
+        <div class="circuit-network"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <!-- Geometric Shapes -->
+        <div class="geometric-shapes">
+            <div class="shape square"></div>
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+        </div>
+        
+        <!-- Energy Waves -->
+        <div class="energy-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+    
+    <div class="container">
         <div class="row">
-          <div class="col-12">
-            <div class="hero-content">
-              <h1 class="hero-title">
-                Powering Industries.<br />
-                <span>Connecting Futures.</span>
-              </h1>
-
-              <div class="hero-subtitle">
-                General Trading | Solar Energy | IT Infrastructure
-              </div>
-
-              <p class="hero-description">
-                AZRI delivers enterprise-grade solutions across UAE – from
-                Huawei eKit and Milesight surveillance to solar trading and
-                cloud infrastructure.
-              </p>
-
-              <div class="hero-buttons">
-                <a
-                  href="contact.html?quote=1"
-                  class="btn btn-primary btn-lg me-3"
-                >
-                  <i class="fas fa-file-invoice me-2"></i>Request a Quote
-                </a>
-                <a href="services.html" class="btn btn-outline btn-lg">
-                  Explore Services <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-              </div>
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Powering Industries.<br />
+                        <span>Connecting Futures.</span>
+                    </h1>
+                    
+                    <div class="hero-subtitle">
+                        General Trading | Solar Energy | IT Infrastructure
+                    </div>
+                    
+                    <p class="hero-description">
+                        AZRI delivers enterprise-grade solutions across UAE – from
+                        Huawei eKit and Milesight surveillance to solar trading and
+                        cloud infrastructure.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="contact.html?quote=1" class="btn btn-primary btn-lg">
+                            <i class="fas fa-file-invoice me-2"></i>Request a Quote
+                        </a>
+                        <a href="services.html" class="btn btn-outline btn-lg">
+                            Explore Services <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-
-      <!-- Partner Strip -->
-      <div class="partner-strip">
-        <div class="container">
-          <div class="partner-logos">
-            <img
-              src="images/partners/kak.png"
-              alt="Huawei eKit Partner"
-            />
-            <img
-              src="images/partners/huawei-enterprise.png"
-              alt="Huawei Enterprise Partner"
-            />
-            <img src="images/partners/Milesight.png" alt="Milesight Partner" />
-            <img src="images/heroes/IFZA Registered.jpg" alt="IFZA Dubai" />
-          </div>
+    </div>
+    
+    <!-- Partner Strip -->
+    <div class="partner-strip">
+    <div class="container">
+        <div class="partner-logos">
+            <img src="images/partners/kak.png" 
+                 style="height: 60px; width: auto; max-width: 150px; object-fit: contain; pointer-events: none;" 
+                 alt="Huawei eKit Partner" />
+            <img src="images/heroes/up2-huawei-enterprise212.png" 
+                 style="height: 60px; width: auto; max-width: 150px; object-fit: contain; pointer-events: none;" 
+                 alt="Huawei Enterprise Partner" />
+            <img src="images/heroes/Milesight112.png" 
+                 style="height: 60px; width: auto; max-width: 150px; object-fit: contain; pointer-events: none;" 
+                 alt="Milesight Partner" />
+            <img src="images/heroes/IFZA-1024x512.png.webp" 
+                 style="height: 60px; width: auto; max-width: 150px; object-fit: contain; pointer-events: none; transform: scale(1.2);" 
+                 alt="IFZA Dubai" />
         </div>
-      </div>
-    </section>
+    </div>
+</div>
+</section>
 
     <!-- ===== SERVICES SECTION - CENTERED ===== -->
-    <section class="section services-section services-centered">
-      <div class="container">
+    <<section class="section services-section services-centered">
+    <div class="container">
         <div class="text-center mb-5">
-          <h2 class="section-title">Our Services</h2>
-          <p class="section-subtitle">
-            Enterprise solutions tailored for Dubai's future
-          </p>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+                Enterprise solutions tailored for Dubai's future
+            </p>
         </div>
 
         <div class="row g-4">
-          <!-- General Trading -->
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="images/icons/trading.svg" alt="General Trading" />
-              </div>
-              <h3>General Trading</h3>
-              <p>
-                Strategic sourcing, procurement, and supply chain solutions for
-                industrial and commercial sectors across UAE.
-              </p>
-              <a href="services.html#trading" class="service-link">
-                Learn more <i class="fas fa-arrow-right"></i>
-              </a>
+            <!-- General Trading -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake fa-3x" style="color: var(--azri-teal);"></i>
+                    </div>
+                    <h3>General Trading</h3>
+                    <p>
+                        Strategic sourcing, procurement, and supply chain solutions for
+                        industrial and commercial sectors across UAE.
+                    </p>
+                    <a href="services.html#trading" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-          </div>
 
-          <!-- Solar Energy -->
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="images/icons/solar.svg" alt="Solar Energy" />
-              </div>
-              <h3>Solar Energy Trading</h3>
-              <p>
-                High-efficiency solar panels, inverters, and complete renewable
-                energy systems for enterprises and government projects.
-              </p>
-              <a href="services.html#solar" class="service-link">
-                Learn more <i class="fas fa-arrow-right"></i>
-              </a>
+            <!-- Solar Energy -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sun fa-3x" style="color: var(--azri-teal);"></i>
+                    </div>
+                    <h3>Solar Energy Trading</h3>
+                    <p>
+                        High-efficiency solar panels, inverters, and complete renewable
+                        energy systems for enterprises and government projects.
+                    </p>
+                    <a href="services.html#solar" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-          </div>
 
-          <!-- IT Infrastructure -->
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="images/icons/it.svg" alt="IT Infrastructure" />
-              </div>
-              <h3>IT Infrastructure</h3>
-              <p>
-                Huawei eKit & Enterprise solutions, Milesight AI surveillance,
-                and cloud data center deployment for enterprise clients.
-              </p>
-              <a href="services.html#it" class="service-link">
-                Learn more <i class="fas fa-arrow-right"></i>
-              </a>
+            <!-- IT Infrastructure -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip fa-3x" style="color: var(--azri-teal);"></i>
+                    </div>
+                    <h3>IT Infrastructure</h3>
+                    <p>
+                        Huawei eKit & Enterprise solutions, Milesight AI surveillance,
+                        and cloud data center deployment for enterprise clients.
+                    </p>
+                    <a href="services.html#it" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!-- ===== WHY CHOOSE AZRI - CENTERED ===== -->
     <section class="section why-section why-centered">
@@ -365,7 +389,7 @@
             <div class="partner-card">
               <div class="partner-logo">
                 <img
-                  src="images/partners/huawei-ekit-logo.png"
+                  src="images/partners/kak.png"
                   alt="Huawei eKit Partner"
                 />
               </div>
@@ -379,7 +403,7 @@
             <div class="partner-card">
               <div class="partner-logo">
                 <img
-                  src="images/partners/huawei-enterprise-logo.png"
+                  src="images/partners/huawei-enerprise-authorized.jpg"
                   alt="Huawei Enterprise"
                 />
               </div>
@@ -406,7 +430,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="partner-card">
               <div class="partner-logo">
-                <img src="images/partners/milesight-logo.png" alt="Milesight" />
+                <img src="images/partners/Milesight.png" style="transform: scale(0.6);"  alt="Milesight" />
               </div>
               <h4>Milesight</h4>
               <p>Security Solutions Partner</p>
@@ -417,13 +441,13 @@
 
         <div class="cert-grid mt-5">
           <div class="cert-item">
-            <img src="images/certifications/iso-9001.png" alt="ISO 9001:2024" />
+            <img src="images/heroes/ISO-9001-Logo.png"style="scale: 2;" alt="ISO 9001:2024" />
             <h4>ISO 9001:2024</h4>
             <p>Quality Management System</p>
           </div>
           <div class="cert-item">
             <img
-              src="images/certifications/ifza-registered.png"
+              src="images/heroes/IFZA Registered (1).png"style="scale: 0.7;"
               alt="IFZA Registered"
             />
             <h4>IFZA Registered</h4>
@@ -431,7 +455,7 @@
           </div>
           <div class="cert-item">
             <img
-              src="images/certifications/huawei-certified.png"
+              src="images/heroes/Huawei Certified.png"style="scale: 1.5;"
               alt="Huawei Certified"
             />
             <h4>Huawei Certified</h4>

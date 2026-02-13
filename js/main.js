@@ -165,3 +165,83 @@
 
 // // ===== REINIT ON RESIZE/LOAD =====
 // ['resize', 'load'].forEach(ev => window.addEventListener(ev, () => ScrollTrigger?.refresh()));
+// ===== CIRCUIT PATTERN ANIMATION =====
+if (document.querySelector('.circuit-pattern')) {
+    // دوران بطيء للنمط
+    gsap.to('.circuit-pattern', {
+        rotation: 360,
+        duration: 300,
+        repeat: -1,
+        ease: 'none',
+        opacity: 0.3
+    });
+    
+    // حركة خفيفة للخلفية
+    gsap.to('.hero-background', {
+        scale: 1.1,
+        duration: 20,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+}
+
+// ===== PARALLAX EFFECT =====
+if (document.querySelector('.hero-background')) {
+    gsap.to('.hero-background', {
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+        },
+        y: 200,
+        ease: 'none'
+    });
+}
+// ===== PROFESSIONAL GSAP BACKGROUND ANIMATIONS =====
+if (typeof gsap !== 'undefined') {
+    
+    // Floating Particles Animation
+    gsap.to('.particle', {
+        x: 'random(-100, 100)',
+        y: 'random(-100, 100)',
+        scale: 'random(0.5, 1.5)',
+        rotation: 'random(0, 360)',
+        duration: 'random(10, 20)',
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+        stagger: 0.5
+    });
+    
+    // Geometric Shapes Rotation
+    gsap.to('.shape', {
+        rotation: 360,
+        scale: 1.2,
+        duration: 20,
+        repeat: -1,
+        ease: 'none',
+        stagger: 2
+    });
+    
+    // Circuit Lines Pulse
+    gsap.to('.circuit-network', {
+        backgroundSize: '60px 60px',
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+    
+    // Energy Waves Movement
+    gsap.to('.wave', {
+        x: 'random(-50, 50)',
+        y: 'random(-50, 50)',
+        scale: 1.1,
+        duration: 10,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+}
