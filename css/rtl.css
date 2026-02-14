@@ -812,3 +812,18 @@
         font-size: 14px !important;
     }
 }
+/* ===== NAVBAR MOBILE RTL FIXES ===== */
+@media (max-width: 991px) {
+    [dir="rtl"] .navbar-collapse {
+        text-align: center !important;
+    }
+    
+    [dir="rtl"] .nav-link {
+        text-align: center !important;
+    }
+    
+    [dir="rtl"] .d-flex.ms-lg-4 .btn i {
+        margin-left: 8px !important;
+        margin-right: 0 !important;
+    }
+}

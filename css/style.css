@@ -36,26 +36,37 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
 }
+
+/* ===== NAVBAR - الحالة الطبيعية (شفاف) ===== */
 .navbar {
     padding: 20px 0;
     transition: var(--azri-transition);
-    background: var(--azri-navy) !important; 
+    background: transparent !important;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(10, 31, 68, 0.15);
+    box-shadow: none;
 }
 
+/* ===== NAVBAR عند التمرير ===== */
 .navbar-scrolled {
     background: var(--azri-navy) !important;
     padding: 15px 0;
     box-shadow: 0 4px 20px rgba(10, 31, 68, 0.2);
 }
 
+/* ===== NAVBAR فوق الخلفية البيضاء ===== */
+.navbar-light-bg {
+    background: rgba(10, 31, 68, 0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .navbar-brand img {
     height: 45px;
     transition: var(--azri-transition);
+    filter: brightness(0) invert(1);
 }
 
 .navbar-brand img:hover {
@@ -70,6 +81,11 @@ a {
     padding: 5px 0 !important;
     font-size: 16px;
     transition: var(--azri-transition);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-light-bg .nav-link {
+    text-shadow: none;
 }
 
 .nav-link::after {
@@ -82,6 +98,7 @@ a {
     background: var(--azri-gradient);
     transition: var(--azri-transition);
     border-radius: 2px;
+    box-shadow: 0 0 10px rgba(30,144,192,0.5);
 }
 
 .nav-link:hover::after,
@@ -91,18 +108,177 @@ a {
 
 .nav-link:hover {
     color: var(--azri-aqua) !important;
+    text-shadow: 0 0 15px rgba(0,201,177,0.5);
 }
 
 .navbar-toggler {
-    border: 2px solid rgba(255,255,255,0.5);
+    border: 2px solid rgba(255,255,255,0.8);
     padding: 8px 12px;
+    background: rgba(10,31,68,0.2);
+    backdrop-filter: blur(5px);
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
 }
 
-/* ===== BUTTONS ===== */
+.navbar-toggler:hover {
+    border-color: var(--azri-teal);
+    background: rgba(30,144,192,0.3);
+}
+
+/* ===== حل مشكلة الـ Responsive (العنصر الأهم) ===== */
+@media (max-width: 991px) {
+    .navbar {
+        background: var(--azri-navy) !important;  /* لون ثابت في الموبايل */
+        backdrop-filter: none;
+    }
+    
+    .navbar-light-bg,
+    .navbar-scrolled {
+        background: var(--azri-navy) !important;  /* نفس اللون في كل الحالات */
+    }
+    
+    .navbar-collapse {
+        background: var(--azri-navy) !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+        margin-top: 15px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .navbar-nav {
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .nav-item {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+    
+    .nav-link {
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+        color: rgba(255,255,255,0.9) !important;
+        font-weight: 600 !important;
+        display: block !important;
+        width: 100% !important;
+        background: transparent !important;
+        text-shadow: none !important;  /* إزالة الظل في الموبايل */
+    }
+    
+    .nav-link:hover {
+        background: rgba(30,144,192,0.2) !important;
+        color: var(--azri-aqua) !important;
+    }
+    
+    .nav-link.active {
+        background: transparent !important;
+        color: var(--azri-aqua) !important;
+        font-weight: 700 !important;
+    }
+    
+    .nav-link.active::after {
+        display: none !important;
+    }
+    
+    .d-flex.ms-lg-4 {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+        gap: 10px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 12px 20px !important;
+        font-size: 15px !important;
+        border-radius: 10px !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn-outline {
+        background: transparent !important;
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        color: white !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn-outline:hover {
+        background: rgba(255,255,255,0.1) !important;
+        border-color: var(--azri-teal) !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn-primary {
+        background: var(--azri-gradient) !important;
+        border: none !important;
+    }
+    
+    .navbar-toggler {
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        padding: 8px 12px !important;
+        border-radius: 10px !important;
+        background: rgba(10,31,68,0.2) !important;
+        backdrop-filter: blur(5px) !important;
+    }
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
+        border-color: var(--azri-teal) !important;
+        box-shadow: 0 0 15px rgba(30,144,192,0.3) !important;
+    }
+    .navbar-toggler-icon {
+        width: 1.3em !important;
+        height: 1.3em !important;
+        filter: brightness(0) invert(1);  /* أيقونة بيضاء */
+    }
+    .navbar-brand img {
+        height: 40px !important;
+        filter: brightness(0) invert(1);  /* شعار أبيض */
+    }
+}
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 35px !important;
+    }
+    
+    .nav-link {
+        padding: 10px 12px !important;
+        font-size: 15px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+}
+[dir="rtl"] .nav-link::after {
+    left: auto;
+    right: 0;
+}
+@media (max-width: 991px) {
+    [dir="rtl"] .navbar-nav {
+        text-align: center !important;
+    }
+    
+    [dir="rtl"] .d-flex.ms-lg-4 .btn i {
+        margin-left: 5px !important;
+        margin-right: 0 !important;
+    }
+}
 .btn {
     padding: 12px 32px;
     font-weight: 600;
@@ -1739,4 +1915,169 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after,
     .cta-title-luxury { font-size: 32px; }
     .cta-description-luxury { font-size: 16px; }
     .cta-button-luxury { padding: 12px 30px !important; font-size: 16px !important; }
+}
+/* ===== NAVBAR MOBILE - UNIFIED STYLE ===== */
+@media (max-width: 991px) {
+    /* تنسيق القائمة المنسدلة */
+    .navbar-collapse {
+        background: var(--azri-navy) !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+        margin-top: 15px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    /* تنسيق عناصر القائمة */
+    .navbar-nav {
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .nav-item {
+        width: 100% !important;
+        margin: 5px 0 !important;
+        text-align: center !important;
+    }
+    
+    .nav-link {
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+        transition: all 0.3s ease !important;
+        color: rgba(255,255,255,0.9) !important;
+        font-weight: 600 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(30,144,192,0.2) !important;
+        color: var(--azri-aqua) !important;
+        transform: translateY(-2px);
+    }
+    
+  
+    
+    /* تنسيق الأزرار في الجوال */
+    .d-flex.ms-lg-4 {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+        gap: 10px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 12px 20px !important;
+        font-size: 15px !important;
+        border-radius: 10px !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn-outline {
+        /* background: transparent !important; */
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        color: white !important;
+    }
+    
+    
+    
+    .d-flex.ms-lg-4 .btn-primary {
+        /* background: var(--azri-gradient) !important; */
+        border: none !important;
+    }
+    
+    
+    
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
+        border-color: var(--azri-teal) !important;
+        box-shadow: 0 0 15px rgba(30,144,192,0.3) !important;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.3em !important;
+        height: 1.3em !important;
+    }
+    
+    /* تنسيق الشعار في الجوال */
+    .navbar-brand img {
+        height: 40px !important;
+    }
+    
+    /* إصلاح الـ RTL للجوال */
+    [dir="rtl"] .navbar-nav {
+        text-align: center !important;
+    }
+    
+    [dir="rtl"] .d-flex.ms-lg-4 .btn i {
+        margin-left: 5px !important;
+        margin-right: 0 !important;
+    }
+    
+    [dir="rtl"] .d-flex.ms-lg-4 .btn-outline i {
+        margin-left: 5px !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* تحسينات للهواتف الصغيرة */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 35px !important;
+    }
+    
+    .nav-link {
+        padding: 10px 12px !important;
+        font-size: 15px !important;
+    }
+    
+    .d-flex.ms-lg-4 .btn {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+}
+/* ===== NOTIFICATIONS STYLING ===== */
+@keyframes slideIn {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+.notification {
+    animation: slideIn 0.3s ease forwards;
+}
+
+.notification.closing {
+    animation: slideOut 0.3s ease forwards;
 }

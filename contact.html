@@ -8,8 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "yKvBPsr38ABI_492D",
+            });
+        })();
+    </script>
+    <script src="js/form.js"></script>
+    </head>
 <body>
 
 <!-- ===== NAVBAR ===== -->
@@ -95,7 +107,7 @@
 </section>
 
 <!-- ===== CONTACT SECTION ===== -->
-<section class="section">
+<section class="section" id="contact-section">
     <div class="container">
         <div class="row g-5">
             <!-- Quote Form -->
@@ -108,27 +120,27 @@
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label for="companyName" class="form-label">Company Name *</label>
-                                <input type="text" class="form-control" id="companyName" required>
+                                <input type="text" class="form-control" id="companyName" required name="companyName">
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="contactPerson" class="form-label">Contact Person *</label>
-                                <input type="text" class="form-control" id="contactPerson" required>
+                                <input type="text" class="form-control" id="contactPerson" required name="contactPerson">
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email *</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" required name="email">
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">Phone *</label>
-                                <input type="tel" class="form-control" id="phone" required>
+                                <input type="tel" class="form-control" id="phone" required name="phone">
                             </div>
                             
                             <div class="col-12">
                                 <label for="serviceCategory" class="form-label">Service Category *</label>
-                                <select class="form-select" id="serviceCategory" required>
+                                <select class="form-select" id="serviceCategory" required name="serviceCategory">
                                     <option value="" selected disabled>Select a service</option>
                                     <option value="General Trading">General Trading</option>
                                     <option value="Solar Energy">Solar Energy Trading</option>
@@ -142,7 +154,7 @@
                             
                             <div class="col-12">
                                 <label for="message" class="form-label">Message / Requirements</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project, requirements, or timeline..."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your project, requirements, or timeline..."></textarea>
                             </div>
                             
                             <div class="col-12">
@@ -292,7 +304,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/form.js"></script>
 <script src="js/rtl.js"></script>
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- تحسين عرض الهاتف -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     
     <title>اتصل بأزري FZCO | طلب عرض سعر</title>
     <meta name="description" content="اتصل بفريق حلول المؤسسات في أزري دبي. طلب عرض سعر للتجارة العامة، الطاقة الشمسية، أو حلول البنية التحتية التقنية.">
@@ -15,10 +16,246 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- تحسينات إضافية للهاتف -->
+    <style>
+        /* ===== تحسينات الهاتف لصفحة الاتصال ===== */
+        @media (max-width: 768px) {
+            /* تقليل الحواف العلوية */
+            .page-header {
+                padding: 100px 0 50px !important;
+            }
+            
+            .page-header h1 {
+                font-size: 32px !important;
+            }
+            
+            .page-header .lead {
+                font-size: 16px !important;
+            }
+            
+            /* تحسين النموذج */
+            .quote-form {
+                padding: 25px !important;
+            }
+            
+            .quote-form h2 {
+                font-size: 24px !important;
+            }
+            
+            .form-label {
+                font-size: 14px !important;
+            }
+            
+            .form-control, .form-select {
+                height: 48px !important;
+                font-size: 14px !important;
+            }
+            
+            textarea.form-control {
+                height: auto !important;
+            }
+            
+            /* تحسين بطاقة الاتصال */
+            .contact-card {
+                padding: 25px !important;
+            }
+            
+            .contact-card h2 {
+                font-size: 24px !important;
+            }
+            
+            .contact-item {
+                gap: 12px !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .contact-icon {
+                width: 40px !important;
+                height: 40px !important;
+                min-width: 40px !important;
+                font-size: 18px !important;
+            }
+            
+            .contact-item h4 {
+                font-size: 16px !important;
+                margin-bottom: 3px !important;
+            }
+            
+            .contact-item p,
+            .contact-item a {
+                font-size: 13px !important;
+                word-break: break-word !important;
+            }
+            
+            /* تحسين ساعات العمل */
+            .contact-card .d-flex {
+                flex-wrap: wrap !important;
+                gap: 10px !important;
+            }
+            
+            .contact-card .d-flex span {
+                font-size: 13px !important;
+            }
+            
+            /* تحسين الخريطة */
+            .mt-4 iframe {
+                height: 200px !important;
+            }
+            
+            /* تحسين الأزرار */
+            .btn {
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+            }
+            
+            /* تحسين الفوتر */
+            .footer {
+                padding: 50px 0 20px !important;
+            }
+            
+            .footer-logo {
+                height: 40px !important;
+            }
+            
+            .footer h4 {
+                font-size: 18px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .footer-links a {
+                font-size: 14px !important;
+            }
+            
+            .footer-contact p {
+                font-size: 13px !important;
+                flex-wrap: wrap !important;
+            }
+            
+            .footer-bottom {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+            }
+            
+            .copyright-text {
+                justify-content: center !important;
+                font-size: 12px !important;
+                flex-wrap: wrap !important;
+            }
+            
+            .language-switch {
+                justify-content: center !important;
+            }
+        }
+        
+        /* تحسينات للهواتف الصغيرة */
+        @media (max-width: 576px) {
+            .page-header {
+                padding: 90px 0 40px !important;
+            }
+            
+            .page-header h1 {
+                font-size: 28px !important;
+            }
+            
+            .quote-form {
+                padding: 20px !important;
+            }
+            
+            .contact-card {
+                padding: 20px !important;
+            }
+            
+            .contact-item {
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                text-align: right !important;
+                gap: 8px !important;
+            }
+            
+            .contact-icon {
+                margin-bottom: 5px !important;
+            }
+            
+            .contact-item div {
+                width: 100% !important;
+            }
+            
+            .contact-card .d-flex {
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                gap: 5px !important;
+            }
+            
+            .btn {
+                width: 100% !important;
+                margin: 5px 0 !important;
+            }
+            
+            .btn-success {
+                margin-top: 10px !important;
+            }
+        }
+        
+        /* تحسين عرض الخلفية على الهاتف */
+        @media (max-width: 768px) {
+            .hero-background {
+                opacity: 0.5 !important;
+            }
+            
+            .particle {
+                display: none !important; /* إخفاء الجسيمات على الهاتف للأداء */
+            }
+            
+            .geometric-shapes .shape {
+                opacity: 0.3 !important;
+            }
+        }
+        
+        /* إصلاح مشكلة الـ RTL في النموذج */
+        [dir="rtl"] .form-control,
+        [dir="rtl"] .form-select {
+            text-align: right !important;
+        }
+        
+        /* تحسين ظهور الروابط */
+        a {
+            word-break: break-word !important;
+        }
+        
+        /* تحسين المسافات */
+        .container {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+        
+        .row {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+        }
+        
+        [class*="col-"] {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    </style><script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+            publicKey: "yKvBPsr38ABI_492D",
+        });
+        })();
+    </script>
+    <script src="../js/form.js"></script>
+
 </head>
 <body>
 
@@ -64,54 +301,43 @@
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER - CENTERED ===== -->
+<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="text-white display-4 fw-bold">اتصل بنا</h1>
+                <h1 class="text-white fw-bold">اتصل بنا</h1>
                 <br>
                 <p class="text-white-50 lead">طلب عرض سعر أو التحدث مع متخصصي حلول المؤسسات</p>
             </div>
         </div>
     </div>
     <div class="circuit-pattern"></div>
-    <!-- ===== PROFESSIONAL ANIMATED BACKGROUND ===== -->
-<div class="hero-background">
-    <!-- Circuit Network -->
-    <div class="circuit-network"></div>
     
-    <!-- Floating Particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+    <!-- الخلفية المتحركة -->
+    <div class="hero-background">
+        <div class="circuit-network"></div>
+        <div class="particles">
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+        </div>
+        <div class="geometric-shapes">
+            <div class="shape square"></div>
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+        </div>
+        <div class="energy-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
     </div>
-    
-    <!-- Geometric Shapes -->
-    <div class="geometric-shapes">
-        <div class="shape square"></div>
-        <div class="shape circle"></div>
-        <div class="shape triangle"></div>
-    </div>
-    
-    <!-- Energy Waves -->
-    <div class="energy-waves">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-</div>
 </section>
 
 <!-- ===== CONTACT SECTION ===== -->
 <section class="section">
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-4">
             <!-- Quote Form -->
             <div class="col-lg-7">
                 <div class="quote-form">
@@ -119,30 +345,30 @@
                     <p class="text-muted text-center mb-4">املأ النموذج أدناه وسيرد فريقنا خلال 24 ساعة.</p>
                     
                     <form id="quoteForm">
-                        <div class="row g-4">
+                        <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="companyName" class="form-label">اسم الشركة *</label>
-                                <input type="text" class="form-control" id="companyName" required>
+                                <input type="text" class="form-control" id="companyName" name="companyName" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="contactPerson" class="form-label">الشخص المسؤول *</label>
-                                <input type="text" class="form-control" id="contactPerson" required>
+                                <input type="text" class="form-control" id="contactPerson" name="contactPerson" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="email" class="form-label">البريد الإلكتروني *</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">رقم الهاتف *</label>
-                                <input type="tel" class="form-control" id="phone" required>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
                             </div>
                             
                             <div class="col-12">
                                 <label for="serviceCategory" class="form-label">فئة الخدمة *</label>
-                                <select class="form-select" id="serviceCategory" required>
+                                <select class="form-select" id="serviceCategory" name="serviceCategory" required>
                                     <option value="" selected disabled>اختر خدمة</option>
                                     <option value="التجارة العامة">التجارة العامة</option>
                                     <option value="الطاقة الشمسية">تجارة الطاقة الشمسية</option>
@@ -156,11 +382,11 @@
                             
                             <div class="col-12">
                                 <label for="message" class="form-label">الرسالة / المتطلبات</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="أخبرنا عن مشروعك، متطلباتك، أو الجدول الزمني..."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="أخبرنا عن مشروعك، متطلباتك، أو الجدول الزمني..."></textarea>
                             </div>
                             
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <button type="submit" class="btn btn-primary w-100 py-3">
                                     <i class="fas fa-paper-plane ms-2"></i>إرسال طلب عرض السعر
                                 </button>
                             </div>
@@ -169,14 +395,14 @@
                 </div>
             </div>
             
-            <!-- Contact Information - FIXED DO NOT CHANGE -->
+            <!-- Contact Information -->
             <div class="col-lg-5">
                 <div class="contact-card">
                     <h2 class="text-center mb-4">معلومات الاتصال</h2>
                     
                     <div class="contact-item">
-                        <div class="contact-icon justify-content: flex-end;">
-                            <i class="fas fa-envelope "></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h4>البريد الإلكتروني</h4>
@@ -222,7 +448,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="https://wa.me/97144186074" class="btn btn-success w-100" target="_blank">
+                        <a href="https://wa.me/97144186074" class="btn btn-success w-100 py-3" target="_blank">
                             <i class="fab fa-whatsapp ms-2"></i>دردشة عبر واتساب
                         </a>
                     </div>
@@ -233,7 +459,7 @@
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.123456789!2d55.123456789!3d25.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjAiTiA1NcKwMDcnMjQuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
                         width="100%" 
-                        height="300" 
+                        height="250" 
                         style="border:0; border-radius: 16px;" 
                         allowfullscreen="" 
                         loading="lazy">
@@ -244,11 +470,10 @@
     </div>
 </section>
 
-
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-4">
             <div class="col-lg-4">
                 <img src="../images/logo/azri-logo-white.svg" alt="أزري FZCO" class="footer-logo">
                 <p class="text-white-50 mt-3">تقدم أزري حلولاً تقنية وتجارية على مستوى المؤسسات لعملاء الحكومة والمؤسسات ومتكاملي الأنظمة في جميع أنحاء الإمارات.</p>
@@ -289,11 +514,11 @@
         </div>
         
         <div class="footer-bottom">
-            <p class="copyright-text" dir="rtl">
-            <span>© 2026</span>
-            <strong>أزري FZCO</strong>.
-            <span>جميع الحقوق محفوظة. شركة مسجلة في IFZA.</span>
-          </p>
+            <p class="copyright-text">
+                <span>© 2026</span>
+                <strong>أزري FZCO</strong>
+                <span>جميع الحقوق محفوظة - شركة مسجلة في IFZA</span>
+            </p>
             <div class="language-switch">
                 <a href="/ar/contact.html" class="active">العربية</a>
                 <span class="mx-2 text-white-50">|</span>
@@ -314,6 +539,7 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/form.js"></script>
